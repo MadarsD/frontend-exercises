@@ -1,6 +1,8 @@
-# PlannerExercise
+# Planner, login form and API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+
+Project contains simple planner and login forms as well as API data demonstration
 
 ## Development server
 
