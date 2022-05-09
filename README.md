@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
 
-Project contains simple planner and login forms as well as API data demonstration
+Project contains simple TODO lists and login form as well as getting and demonstrating data from REST Api.
+
+---
 
 ## Development server
 
