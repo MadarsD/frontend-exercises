@@ -1,0 +1,74 @@
+<section class="login-form-section">
+  <h1>Login form</h1>
+
+  <div class="login-form-container">
+    <div class="form-image-container">
+      <img class="form-image" src="https://picsum.photos/200/300" alt="image">
+    </div>
+    <form [formGroup]="loginForm" class="login-form">
+
+      <div class="form-item">
+        <label for="email">Email</label>
+        <input
+          [ngClass]="{'input-error': loginForm.controls['email'].touched && loginForm.controls['email'].hasError('required')}"
+          class="form-text-input"
+          formControlName="email"
+          id="email"
+          type="text"/>
+        <small
+          *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('required')"
+          class="form-error">
+          This field is required
+        </small>
+        <small
+          *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('email')"
+          class="form-error">
+          Wrong format
+        </small>
+      </div>
+
+      <div class="form-item">
+        <label for="password">Password</label>
+        <input class="form-text-input" formControlName="password" id="password" type="password"/>
+      </div>
+
+      <label>
+        <input formControlName="subscribe" type="checkbox"/>
+        Subscribe to Newsletter
+      </label>
+
+      <select formControlName="country">
+        <option [value]="''" disabled>Choose a country</option>
+        <option *ngFor="let country of countries" [value]="country.countryCode">
+          {{country.title}}
+        </option>
+      </select>
+
+      <div class="gender-form">
+        <label>Gender: </label>
+        <div class="form-control">
+          <label class="gender-selector">
+            <input type="radio" name="gender" value="male" [(ngModel)]="gender">
+            Male
+          </label>
+          <label class="gender-selector">
+            <input type="radio" name="gender" value="female" [(ngModel)]="gender">
+            Female
+          </label>
+        </div>
+      </div>
+
+      <div class="captcha-element">
+        <ngx-recaptcha2
+                        [siteKey]="siteKey"
+                        formControlName="recaptcha">
+        </ngx-recaptcha2>
+      </div>
+
+      <div class="login-btn-container">
+        <button class="login-btn" type="button" (click)="login()">Login</button>
+      </div>
+    </form>
+  </div>
+
+</section>

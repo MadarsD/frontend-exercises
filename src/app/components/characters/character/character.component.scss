@@ -1,0 +1,55 @@
+.character {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+.character-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.status {
+  height: 15px;
+  width: 15px;
+  background-color: grey;
+  border-radius: 50%;
+  display: inline-flex;
+}
+
+.status-alive {
+  background-color: green;
+}
+
+.status-dead {
+  background-color: red;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.character-image {
+  border-radius: 50%;
+}
+
+.character-image-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn-back {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    color: darkcyan;
+  }
+}
+

@@ -1,0 +1,61 @@
+<section>
+
+  <div class="button-container">
+    <button class="btn-back" routerLink="/characters">Go back</button>
+  </div>
+
+  <div *ngIf="character$ | async as character" class="character">
+
+    <div class="character-image-container">
+      <img class="character-image" [src]="character.image"/>
+    </div>
+
+    <div class="character-description">
+      <div>
+        <div
+          [ngClass]="character.status === 'unknown' ? '' : character.status === 'Alive' ? 'status-alive' : 'status-dead'"
+          class="status"></div>
+        <span>{{ character.status }}</span>
+      </div>
+
+      <p>
+        <b>ID: </b>
+        <span>{{character.id}}</span>
+      </p>
+
+      <p>
+        <b>Name: </b>
+        <span>{{character.name}}</span>
+      </p>
+
+      <p>
+        <b>Gender: </b>
+        <span>{{character.gender}}</span>
+      </p>
+
+      <p>
+        <b>Origin: </b>
+        <span>{{character.origin.name}}</span>
+      </p>
+
+      <p>
+        <b>Location: </b>
+        <span>{{character.location.name}}</span>
+      </p>
+
+      <p>
+        <b>Type: </b>
+        <span>{{character.type || 'unknown'}}</span>
+      </p>
+
+      <p>
+        <b>Species: </b>
+        <span>{{character.species}}</span>
+      </p>
+    </div>
+
+
+  </div>
+
+</section>
+
