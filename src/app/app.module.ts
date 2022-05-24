@@ -2,13 +2,50 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PlannerSimpleComponent } from './components/planner/planner-simple/planner-simple.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HeaderComponent } from './components/header/header.component';
+import {PlannerComponent} from "./components/planner/planner.component";
+import { PlannerWithCheckboxesComponent } from './components/planner/planner-with-checkboxes/planner-with-checkboxes.component';
+import { PlannerWithCheckboxesAndFilterComponent } from './components/planner/planner-with-checkboxes-and-filter/planner-with-checkboxes-and-filter.component';
+import { LoginFormComponent } from './components/forms/login-form/login-form.component';
+import {FormsComponent} from "./components/forms/forms.component";
+import {HttpClientModule} from "@angular/common/http";
+import {CharactersComponent} from "./components/characters/characters.component";
+import { CharacterCardComponent } from './components/characters/character-card/character-card.component';
+import { CharacterComponent } from './components/characters/character/character.component';
+import {NgxCaptchaModule} from "ngx-captcha";
+import { PeopleComponent } from './components/people/people.component';
+import { PeopleTableComponent } from './components/people/people-table/people-table.component';
+import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlannerComponent,
+    PlannerSimpleComponent,
+    HeaderComponent,
+    PlannerWithCheckboxesComponent,
+    PlannerWithCheckboxesAndFilterComponent,
+    FormsComponent,
+    LoginFormComponent,
+    CharactersComponent,
+    CharacterCardComponent,
+    CharacterComponent,
+    PeopleComponent,
+    PeopleTableComponent,
   ],
+
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxCaptchaModule,
+    NgbPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
